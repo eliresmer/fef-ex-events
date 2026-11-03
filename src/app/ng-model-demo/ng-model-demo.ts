@@ -15,8 +15,8 @@ export class NgModelDemo {
   //   make    - string
   public name: String = "";
   public makes: String[] = ["Volvo", "Saab", "Mercedes", "Audi"];
-  public make = "";
-  public myRange: String = "";
+  public make = "Volvo";
+  public myRange: number = 0;
   public gender: String = "";
   public active: boolean = false;
 
