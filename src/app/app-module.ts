@@ -7,6 +7,7 @@ import { Events } from './events/events';
 import { SelectControl } from './select-control/select-control';
 import { DraggableElement } from './draggable-element/draggable-element';
 import { NgModelDemo } from './ng-model-demo/ng-model-demo';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { NgModelDemo } from './ng-model-demo/ng-model-demo';
   ],
   // TODO (Part 1): add FormsModule to imports (and its import statement above)
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],

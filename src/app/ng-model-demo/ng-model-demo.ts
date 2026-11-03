@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, model } from '@angular/core';
 
 @Component({
   selector: 'app-ng-model-demo',
@@ -13,4 +13,11 @@ export class NgModelDemo {
   //   gender  - string
   //   myRange - number
   //   make    - string
+  public name: String = "";
+  public makes: String[] = ["Volvo", "Saab", "Mercedes", "Audi"];
+  public make = "";
+  public myRange: String = "";
+  public gender: String = "";
+  public active: boolean = false;
+
 }

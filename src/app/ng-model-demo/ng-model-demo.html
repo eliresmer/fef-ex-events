@@ -1,18 +1,35 @@
+
+
 <h2>1. Two-way binding with ngModel</h2>
 
 <!-- TODO (Part 1): Before any [(ngModel)] will compile, import FormsModule in app-module.ts -->
 
 <h3>Text</h3>
+<input type="text" [(ngModel)]="name">
+<p>Name: {{name}}</p>
 <!-- TODO: text input bound to name, then <p>Hello {{name}}</p> -->
 
 <h3>Checkbox</h3>
+<input type="checkbox" [(ngModel)]="active">
+<p>Active: {{active}}</p>
 <!-- TODO: checkbox bound to active, then <p>Active: {{active}}</p> -->
 
 <h3>Radio buttons</h3>
+<input type="radio" [(ngModel)]="gender" value="male">
+<input type="radio" [(ngModel)]="gender" value="female">
+<p>Gender: {{gender}}</p>
 <!-- TODO: two radios (male / female) bound to gender, then <p>{{gender}}</p> -->
 
 <h3>Range</h3>
+<input type="range" [(ngModel)]="myRange">
+<p>Range: {{myRange}}</p>
 <!-- TODO: range input bound to myRange, then <p>{{myRange}}</p> -->
 
 <h3>Select</h3>
+<label for="cars">Choose a car:</label>
+
+<select [(ngModel)]="make">
+  <option *ngFor="let make of makes" [ngValue]="make">{{make}}</option>
+</select>
+<p>Make: {{make}}</p>
 <!-- TODO: select bound to make (volvo, saab, mercedes, audi), then <p>{{make}}</p> -->
