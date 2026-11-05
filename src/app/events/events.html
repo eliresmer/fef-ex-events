@@ -2,10 +2,24 @@
 
 <!-- 2a TODO: button with (click), shows a click count -->
 
+<button (click)="onClick()">Click me!</button>
+<p>count: {{count}}</p>
 <!-- 2b TODO: text input with (keyup)="...($event)", shows value and key code -->
 
+<input (keyup)="keyUp($event)"/>
+<p>val: {{value}}</p>
 <!-- 2c TODO: text input with a #template reference variable, pass the variable to the handler -->
 
+<input #myTextbox (keyup)="onKey(myTextbox.value)"/>
+<p>val: {{newval}}</p>
 <!-- 2d TODO: text input with (blur) -->
-
+<div (mousemove)="mousemove($event)" style="background-color:red; height:300px; width:300px;">
+</div>
+<p>{{coords}}</p>
 <!-- 2e TODO: 300 x 300 grey box with (mousemove), shows X / Y -->
+<div #draggable (mousemove)=onContentDrag($event)
+(mouseup)=onMouseButton($event)
+(mousedown)=onMouseButton($event)
+style="height:300px; width:300px;background-color:blue; position:absolute;"
+
+></div>
